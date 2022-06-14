@@ -1,5 +1,6 @@
 import pandas as pd
 import pyodbc
+
 # import mysql.connector
 
 # mydb = mysql.connector.connect(
@@ -12,8 +13,8 @@ import pyodbc
 server = 'localhost' 
 database = 'Toverlantaarn' 
 username = 'root' 
-password = '' 
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+password = ''
+cnxn = pyodbc.connect('DRIVER={MariaDB};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 df = pd.read_csv("Museum-collectie-beschrijvinging.csv")
