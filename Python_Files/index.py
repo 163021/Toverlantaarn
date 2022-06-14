@@ -14,7 +14,7 @@ server = 'localhost'
 database = 'Toverlantaarn' 
 username = 'root' 
 password = ''
-cnxn = pyodbc.connect('DRIVER={MariaDB};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cnxn = pyodbc.connect('DRIVER={mysqli};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 df = pd.read_csv("Museum-collectie-beschrijvinging.csv")
